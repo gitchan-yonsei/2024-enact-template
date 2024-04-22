@@ -31,7 +31,7 @@ export const useBackHandler = () => {
 	return useCallback(() => {
 		setPanelData(prev => prev.slice(0, prev.length - 1));
 		debugLog('BACK[I]', {});
-	}, []);
+	}, [setPanelData]);
 };
 
 export const useCloseHandler = () =>
